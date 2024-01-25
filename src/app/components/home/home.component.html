@@ -9,7 +9,7 @@
  </div>
 <div class="container">
   <div class="row  mx-auto">
-    <div *ngFor="let item of Houses" class="col-12  col-md-4 col-xl-3 product rounded ">
+    <div *ngFor="let item of Houses" class="col-12  col-md-4 col-xl-3 product rounded house-card">
       <div class="my-2  rounded " >
       <div class="w-100">
         <owl-carousel-o [options]="customOptions">
@@ -50,3 +50,13 @@
   </div>
 </div>
 </div>
+
+<script>
+  ScrollReveal({
+    reset:true,
+    distanse:'60px',
+    duration:2500,
+    delay:400
+  })
+  ScrollReveal().reveal('.house-card',{delay:600,origin:'left'})
+</script>

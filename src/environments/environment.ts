@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  BaseApiURL: 'http://localhost:3000',
+  BaseApiURL: 'https://airbnb-app.cyclic.app/',
 };
