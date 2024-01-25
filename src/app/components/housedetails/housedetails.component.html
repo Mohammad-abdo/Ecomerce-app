@@ -1,0 +1,38 @@
+
+
+<div class="my-5">
+  <div class="row">
+    <div class="col-5 mx-2 shadow py-2 rounded">
+
+      <owl-carousel-o [options]="customOptions3">
+
+        <ng-container *ngFor="let img of myHouse.images">
+          <ng-template carouselSlide >
+            <img [src]="url+'/img/houses/'+img"  class="img-fluid rounded">
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+
+    </div>
+    <div class="col-6">
+<div class="my-3">
+  <div class="d-flex align-items-center justify-content-center">
+    <h3 class=" fw-bold" > {{myHouse.address}} </h3>
+  </div>
+  <div class="mt-3 d-flex  " style="font-size: 19px;">
+    <span class="fw-bold mx-2">Descrition:</span> {{myHouse.description}}
+  </div>
+  <div class="mt-3 d-flex " style="font-size: 19px;">
+    <div ><span class=" mx-2 fw-bold">price :</span> <span class="">{{myHouse.price}}</span></div>
+  </div>
+
+  <div class="d-flex align-items-center">
+    <div class="span mx-2">Add To Cart</div>
+    <div> <button class="btn btn-danger">Bay Now</button></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>

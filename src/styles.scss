@@ -1,1 +1,170 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+:root
+{
+    --main-color:#000000;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+    --transiton-all:all 0.6s ease-in-out;
+}
+body{
+  font-family: var(--font-family) !important;
+}
+
+img{
+  object-fit: cover;
+}
+.rating-color
+{
+  color: var(--rating-color);
+}
+.cursor-pointer
+{
+  cursor: pointer;
+
+
+}
+a , a:hover{
+  color: black;
+  text-decoration: none;
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+.product
+{
+  box-shadow: var(--shadow);
+  transition: var(--transiton-all);
+
+  margin: 5px 0;
+  border:  1px var(--main-color);
+  position: relative;
+  .wish_market{
+    position: absolute;
+  transition: var(--transiton-all);
+
+    top: 2%;
+    background: #ffffff;
+    right: 9px;
+    width: 50px;
+    height: 100px;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border: 1px solid #ffa621;
+    border-radius: 10px;
+    transform: translateX(100%);
+    .heart-icon{
+      &:hover{
+        color: #ffffff;
+        border-radius:0 0 10px 10px ;
+        background: #ff80b3;
+      }
+    }
+    .cart-icon{
+
+      border-bottom: 1px solid #000000;
+      &:hover{
+        color: #ffffff;
+        border-radius: 10px 10px 0 0 ;
+        background: #ffa621;
+      }
+    }
+.cart-icon,.heart-icon{
+  width: 100%;
+  height: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+  font-size: 18px;
+  transition: var(--transiton-all);
+  color: #000000;
+
+}
+
+  }
+  &:hover .wish_market{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.product .btn
+{
+  transition: transform 1s , opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+  font-weight: bold;
+  box-shadow: inset 1px 2px 3px #1415157b;
+  transition: all 0.7s ease-in-out;
+  &:hover{
+  background-color: #ffcb6ae3 !important;
+  color: #ffffffe3;
+  }
+}
+.product:hover .btn
+{
+  opacity: 1;
+  transform: translateY(0%);
+  color: rgb(0, 0, 0) !important;
+  background-color: #ffffffe3;
+border: 1px solid #0000005e;
+
+
+}
+.font-sm
+{
+  font-size: 14px;
+}
+.text-main
+{
+  color: var(--main-color);
+}
+.bg-main
+{
+  background-color: var(--main-color) !important;
+}
+.bg-main-light
+{
+  background-color: var(--light-color) !important;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  color: #ffffff;
+  font-size: 20px;
+  /* margin: 5px; */
+  padding: 4px 7px;
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+  &:hover{
+    background-color: #ffe895;
+    color: #000000;
+  }
+}

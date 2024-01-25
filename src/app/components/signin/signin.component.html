@@ -1,0 +1,40 @@
+
+<div *ngIf="ApiError" class="alert alert-danger my-4 mx-auto">
+  {{ApiError}}
+</div>
+
+<form action="" class="border rounded w-50 mx-auto p-2 shadow my-5 log_form"
+[formGroup]="loginForm"
+#userForm="ngForm"
+  (ngSubmit)="handelLogin(loginForm)"
+>
+  <div class="my-4">
+    <div class="max-auto text-center fs-4">Compleate Login</div>
+  </div>
+  <div class="form-group d-flex mx-3 my-5 align-items-center">
+    <label for="email" class="form-label mx-auto  "style="font-weight: bold;width: 100px;">Email :</label>
+    <input type="email" class="form-control  py-3 rounded " id="email" placeholder="Enter Email" name="email" required
+    formControlName="email"
+    [ngClass]="{'is-invalid':(email?.touched||email?.dirty)&& email?.invalid}"
+    >
+  </div>
+<div class="form-group d-flex mx-3 my-5  align-items-center">
+    <label for="password" class="form-label mx-auto  "style="font-weight: bold;width: 100px;">Password :</label>
+    <input type="password" class="form-control py-3 rounded" id="password"  name="password" placeholder="Enter Password" required
+    formControlName="password"
+    [ngClass]="{'is-invalid':(password?.touched||password?.dirty)&& password?.invalid}"
+    >
+  </div>
+  <div class="form-group d-flex mx-3 my-5  align-items-center flex-reverse">
+    <button class="btn btn-outline-light text-dark border px-3  rounded "
+
+    type="submit"
+    style="font-weight: bold;">
+  <i *ngIf="isLoder" class="fas fa-spinner fa-spin"></i>
+  <span *ngIf="!isLoder">Log in</span>
+  </button>    <span class=" mx-3"> or ? <a routerLink="/register" class="text-success ">create Account</a> </span>
+    </div>
+  <div class="form-group d-flex mx-3 my-5  align-items-center">
+  </div>
+</form>
+
