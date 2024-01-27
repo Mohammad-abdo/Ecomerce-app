@@ -1,3 +1,4 @@
+<!-- top nav  -->
 <nav class=" navbar navbar-expand-sm navbar-light bg-white small_nav" style="height: 40px;">
 
   <ul class="navbar-nav me-auto mt-2 mt-lg-0">
@@ -89,84 +90,46 @@
 
           <li><a class="dropdown-item" href="#">Airbnb your home</a></li>
           <li><a class="dropdown-item" href="#">Help</a></li>
-          <li *ngIf="isLogin" class="nav-item mx-2">
-            <a (click)="logOut()" class="dropdown-item"routerLink="login" routerLinkActive="bg-dark text-light rounded-pill">Log Out</a>
+          <li *ngIf="isLogin" class="nav-item ">
+            <a (click)="logOut()" class="dropdown-item"routerLink="login" routerLinkActive="bg-dark text-light ">Log Out</a>
           </li>
         </ul>
       </div>
-        <!-- <li *ngIf="!isLogin" class="nav-item mx-2">
-          <a class="nav-link px-3 text_bold" routerLink="login" routerLinkActive="bg-dark text-light rounded-pill">Login</a>
-        </li>
-        <li *ngIf="!isLogin" class="nav-item mx-2">
-          <a class="nav-link px-3 text_bold" routerLink="register" routerLinkActive="bg-dark text-light rounded-pill">Register</a>
-        </li>
-        <li *ngIf="isLogin" class="nav-item mx-2">
-          <a (click)="logOut()" class="nav-link px-3 border rounded-pill btn btn-outline-white logOut"routerLink="login" routerLinkActive="bg-dark text-light rounded-pill">Log Out</a>
-        </li> -->
-
-
-
-
       </ul>
 
     </div>
   </div>
 </nav>
-<script>
-  ScrollReveal({
-    reset:true,
-    distanse:'60px',
-    duration:2500,
-    delay:400
-  })
-  ScrollReveal().reveal('.nav_link',{delay:600,origin:'bottom'})
-</script>
-
-<!-- <div class="container-fluid shadow categore mb-2 " style="height: 80px; ">
-
-  <span class="p-2 d-flex align-items-center"(click)="prev()" >
-    <i class="fa-regular fa-circle-left shadow-lg fs-4"></i>
-  </span>
 
 
 
-    <div class="scroll-container">
-      <div class="item" *ngFor="let item of categories "   (click)="pageReload()">
 
-        <a href="#" class="text-decoration-none  mx-2  m-0 pt-1" [routerLink]="['houseCategory',item._id]">
-          <small *ngIf="item.name">{{ item.icon | slice: 0:30 }}</small>
-        </a>
-      </div>
+<div class="d-flex align-items-center shadow w-100" style="height: 60px; overflow-y: hidden;">
+
+  <div class="w-100 row h-100">
+    <div class="col-1 bg-light h-100">
+      <span class="text-bold text-center fs-6">Categories</span>
     </div>
+    <div class="col-11 d-flex align-items-center justify-content-between justify-content-center">
 
+      <owl-carousel-o [options]="customOptions" class=" w-100 mx-auto d-flex align-items-center justify-content-between justify-content-center">
+        <ng-container *ngFor="let item of categories" (click)="pageReload()">
+          <ng-template carouselSlide>
+            <div class="mx-3 shadow rounded text-center my-2 py-2 px-"(click)="pageReload()" routerLinkActive="bg-dark text-light " >
+              <a href="#" class="text-decoration-none rounded "routerLinkActive=" text-light "  style="font-size: 12px;"[routerLink]="['houseCategory', item._id]">
+                <span *ngIf="item.name">{{ item.icon | slice: 0:13 }}</span>
+              </a>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
 
-
-
-
-    <span class="p-2 d-flex align-items-center" (click)="next()">
-      <i class="fa-regular fa-circle-right shadow-lg fs-4"></i>
-    </span>
-
-    <div id="buttonFilters" class="d-flex align-items-center m-auto">
-      <button type="button" class="btn btn-outline-secondary m-auto d-flex p-1 fs-6 filter_hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel fw-medium fs-6 m-auto text-black" viewBox="0 0 16 16">
-          <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"></path>
-        </svg>
-        <p class="fw-medium fs-6 m-auto text-black p-2">
-          <small class="">Filters</small>
-        </p>
-      </button>
     </div>
+  </div>
 
-  </div> -->
-
-
-
+</div>
 
 
-  <!-- <div class=" d-flex align-items-center " *ngFor="let item of categories" (click)="pageReload()" >
 
-    <span  class="    m-0 pt-1" [routerLink]="['houseCategory',item._id]">
-      {{ item.icon  }}
-    </span>
-  </div> -->
+
+

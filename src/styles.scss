@@ -43,7 +43,6 @@ li{
 {
   box-shadow: var(--shadow);
   transition: var(--transiton-all);
-
   margin: 5px 0;
   border:  1px var(--main-color);
   position: relative;
@@ -140,11 +139,10 @@ border: 1px solid #0000005e;
 }
 
 .owl-theme .owl-nav {
-  margin-top: 10px;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
   position: absolute;
-  top: 50%;
+  top: 45%;
   z-index: 10;
   display: flex;
   width: 100%;

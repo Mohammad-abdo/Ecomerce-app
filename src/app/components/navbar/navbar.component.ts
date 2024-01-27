@@ -11,9 +11,12 @@ import { CategoreService } from 'src/app/Services/categore.service';
 })
 export class NavbarComponent {
   isLogin: boolean = false;
-  categories:category[]=[]
+  categories: category[] = [];
 
-  constructor(private _AuthService: AuthService ,private _CategoreService:CategoreService) {
+  constructor(
+    private _AuthService: AuthService,
+    private _CategoreService: CategoreService
+  ) {
     _AuthService.userData.subscribe({
       next: () => {
         _AuthService.userData.getValue() !== null
@@ -26,55 +29,48 @@ export class NavbarComponent {
     this._AuthService.logOut();
   }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.showCategory(this.currentIndex);
 
-
-
-  setTimeout(()=>{
-    this._CategoreService.getAllCategories().subscribe({
-      next:(res:any)=>{
-        this.categories=res
-      console.log("respose ",this.categories);
-
-      },
-      error:(err:any)=>{
-        console.log(err);
-
-      }
-      })
-
-
-  },2000)
+    setTimeout(() => {
+      this._CategoreService.getAllCategories().subscribe({
+        next: (res: any) => {
+          this.categories = res;
+          console.log('respose ', this.categories);
+        },
+        error: (err: any) => {
+          console.log(err);
+        },
+      });
+    }, 2000);
   }
   currentIndex = 0;
 
   // carosule
-  customOptions:  OwlOptions = {
+  customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
+    autoplay: true,
     touchDrag: true,
     pullDrag: false,
-    dots: true,
+    dots: false,
     navSpeed: 700,
-    navText: ['', ''],
     responsive: {
       0: {
-        items: 1
+        items: 4,
       },
       400: {
-        items: 2
+        items: 4,
       },
       740: {
-        items: 3
+        items: 6,
       },
       940: {
-        items: 4
-      }
+        items: 10,
+      },
     },
-    nav: false
-  }
-
+    nav: false,
+  };
   showCategory(index: number) {
     this.currentIndex = index;
   }
@@ -84,11 +80,13 @@ export class NavbarComponent {
   }
 
   next() {
-    this.currentIndex = Math.min(this.categories.length - 10, this.currentIndex + 10);
+    this.currentIndex = Math.min(
+      this.categories.length - 10,
+      this.currentIndex + 10
+    );
   }
 
-  pageReload(){
-    window.location.reload()
+  pageReload() {
+    window.location.reload();
   }
 }
-
