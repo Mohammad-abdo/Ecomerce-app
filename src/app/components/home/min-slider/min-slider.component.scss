@@ -49,4 +49,29 @@ button{
 
 }
 
+.opacity_animate{
+opacity: 1;
+animation: opacity-in linear;
+animation-timeline: view();
+animation-range: entry-crossing ;
+}
 
+@keyframes opacity-in {
+  to{
+    opacity: 0;
+  }
+}
+.img-animate{
+  scale:  1.5; opacity: 1;
+  transition: all .9s ease-in-out;
+  animation: fade-in linear forwards;
+  animation-timeline: view(500px 100px);
+  // animation-timeline: view();
+  animation-range:  entry-crossing;
+
+}
+@keyframes fade-in
+{
+  // from{scale:  .5; opacity: 0;}
+  to{scale: 0.6; opacity: 0;}
+}

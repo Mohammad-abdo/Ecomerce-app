@@ -23,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MinSliderComponent } from './components/home/min-slider/min-slider.component';
 import { HousectegoryComponent } from './components/housectegory/housectegory.component';
+import {register} from 'swiper/element/bundle'
+register()
+
 @NgModule({
   declarations: [
     AppComponent,
