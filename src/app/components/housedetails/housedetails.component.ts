@@ -5,7 +5,6 @@ import { GetProductsService } from 'src/app/Services/get-products.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { environment } from 'src/environments/environment';
 import { CategoreService } from 'src/app/Services/categore.service';
-import { category } from './../../Models/category';
 
 @Component({
   selector: 'app-housedetails',
@@ -19,7 +18,7 @@ export class HousedetailsComponent implements OnInit {
     autoplay: true,
     touchDrag: true,
     pullDrag: false,
-    dots: true,
+    dots: false,
     navSpeed: 700,
     responsive: {
       0: {
@@ -37,8 +36,7 @@ export class HousedetailsComponent implements OnInit {
     },
     nav: true,
     navText: [
-      '<button class="btn btn-primary custom-prev-button"><i class="fas fa-chevron-left"></i> </button>',
-      '<button class="btn btn-primary custom-next-button"> <i class="fas fa-chevron-right"></i></button>',
+      '<button class="owl-prev"><i class="fa fa-angle-left"></i> </button>', '<button class="owl-next"> <i class="fa fa-angle-right"></i></button>'
     ],
   };
 
@@ -68,17 +66,17 @@ export class HousedetailsComponent implements OnInit {
   imgIndex: number = 0;
   url = environment.BaseApiURL;
   owlCar: any;
-  ImgBorderStyle={
-    border:"1px solid red",
-    obcity:.8,
-    trnsform:"trnslatY(1)"
-  }
+  ImgBorderStyle = {
+    border: '1px solid red',
+    obcity: 0.8,
+    trnsform: 'trnslatY(1)',
+  };
   constructor(
     private _ActivatedRoute: ActivatedRoute,
     private _GetProductsService: GetProductsService,
     private _CategoreService: CategoreService
   ) {}
-  displayStyle = 'none';
+  displayStyle :string= 'none';
   openPopup() {
     this.displayStyle = 'block';
     document.body.classList.add('body-no-scroll');
@@ -128,7 +126,9 @@ export class HousedetailsComponent implements OnInit {
 
   navigateImages(direction: 'prev' | 'next'): void {
     if (direction === 'prev') {
-      this.imgIndex = (this.imgIndex - 1 + this.myHouse.images.length) % this.myHouse.images.length;
+      this.imgIndex =
+        (this.imgIndex - 1 + this.myHouse.images.length) %
+        this.myHouse.images.length;
     } else {
       this.imgIndex = (this.imgIndex + 1) % this.myHouse.images.length;
     }

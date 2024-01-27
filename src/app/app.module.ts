@@ -23,10 +23,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MinSliderComponent } from './components/home/min-slider/min-slider.component';
 import { HousectegoryComponent } from './components/housectegory/housectegory.component';
-import {register} from 'swiper/element/bundle';
+
 import { TopnavComponent } from './components/navbar/topnav/topnav.component';
 import { MiddlenavComponent } from './components/navbar/middlenav/middlenav.component'
-register()
+
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,65 +8,65 @@
   display: none; /* Initially hide the overlay */
   overflow-y: auto;
   z-index: 99999;
-  background-color: rgba(0,0,0,0.5);
-  .clear{
+  background-color: rgba(0, 0, 0, 0.5);
+  .clear {
     position: absolute;
     top: 20px;
-  right: 20px;
-  cursor: pointer;
-  i{
-    font-size: 30px;
-    color: white;
-    border-radius: 50%;
-    &:hover{
-      color: black;
-      background-color: rgba(255, 255, 255, 0.437);
+    right: 20px;
+    cursor: pointer;
+    i {
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      &:hover {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.437);
+      }
     }
   }
-  }
-  .overlay-container{
+  .overlay-container {
     width: 80% !important;
     height: 100vh !important;
     margin: 0 auto;
   }
-
 }
 .body-no-scroll {
   overflow: hidden;
   position: fixed;
 }
-.img-carusel-custom{
+.img-carusel-custom {
   position: relative;
-&:hover {
-  .img-prev,.img-next{
-     color: #000000;
-    background-color: white;
-    border: #ffb300;
+  &:hover {
+    .img-prev,
+    .img-next {
+      color: #000000;
+      background-color: white;
+      border: #ffb300;
+    }
   }
-
-  }
-  .img-carusel-icons{
+  .img-carusel-icons {
     position: absolute;
     top: 40%;
     left: 0;
-width: 100%;
-padding: 0 9px;
-margin: 0 auto;
-.img-prev,.img-next{
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.6s ease-in-out;
-  background-color: #ffffff78;
-  border: 1px solid #0f0a0075;
-  font-size: 20px;
-  &:hover{
-    color: #000000;
-    background-color: white;
-    border: #ffb300;
-  }
-}
+    width: 100%;
+    padding: 0 9px;
+    margin: 0 auto;
+    .img-prev,
+    .img-next {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.6s ease-in-out;
+      background-color: #ffffff78;
+      border: 1px solid #0f0a0075;
+      font-size: 20px;
+      &:hover {
+        color: #000000;
+        background-color: white;
+        border: #ffb300;
+      }
+    }
   }
 }

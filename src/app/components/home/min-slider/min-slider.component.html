@@ -1,68 +1,50 @@
-
-
-
-<div class="my-4 ">
+<div class="my-4">
   <div class="row gx-2 justify-content-between">
-
-    <div class="col-xl-9 col-md-9 col-sm-12  rounded shadow">
+    <div class="col-xl-9 col-md-9 col-sm-12 rounded shadow">
       <owl-carousel-o [options]="customOptions" class="owl-carousel-o">
-
-  <ng-container *ngFor="let img of Houses" class="relative main-carousel-container">
-          <ng-template carouselSlide >
-            <img height="400" [src]="url+ '/img/houses/'+img.images[0]" [alt]="img.name" class=" img-animate">
+        <ng-container
+          *ngFor="let img of Houses"
+          class="relative main-carousel-container"
+        >
+          <ng-template carouselSlide>
+            <img
+              height="400"
+              [src]="url + '/img/houses/' + img.images[0]"
+              [alt]="img.name"
+              class="img-animate"
+            />
             <div class="product_info">
-
-
-
-               <div>
+              <div>
                 <div class="my-3">
-                  <h3 class=" opacity_animate">
-                    {{img.name}}
+                  <h3 class="opacity_animate">
+                    {{ img.name }}
                   </h3>
                 </div>
                 <div class="my-3">
-                  <p class="opacity_animate">{{img.description |slice :0:100}}</p>
+                  <p class="opacity_animate">
+                    {{ img.description | slice : 0 : 100 }}
+                  </p>
                 </div>
                 <div class="my-2">
-                  <button class="btn btn-outlin-primary text-white shadow opacity_animate" [routerLink]="['/details',img._id]">Show More</button>
+                  <button
+                    class="btn btn-outlin-primary text-white shadow opacity_animate"
+                    [routerLink]="['/details', img._id]"
+                  >
+                    Show More
+                  </button>
                 </div>
-               </div>
-
+              </div>
             </div>
           </ng-template>
-
         </ng-container>
-
-
-
       </owl-carousel-o>
-
-
-
     </div>
-<div class="col-3 d-none d-md-block">
-<div class="  d-flex align-items-center h-100">
- <div class=" w-100 shadow h-100" >
-  <ul class="d-flex flex-start flex-column">
-
-  </ul>
- </div>
-</div>
-</div>
+    <div class="col-3 d-none d-md-block">
+      <div class="d-flex align-items-center h-100">
+        <div class="w-100 shadow h-100">
+          <ul class="d-flex flex-start flex-column"></ul>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>
-
-
-<!-- <div class="my-2 mx-2">
-  <owl-carousel-o [options]="customOptions2">
-
-    <ng-container *ngFor="let slide of Houses">
-      <ng-template carouselSlide >
-        <img [src]="url+ '/img/houses/'+slide.images[0]"  [routerLink]="['/details',slide._id]">
-      </ng-template>
-    </ng-container>
-
-  </owl-carousel-o>
-</div> -->
-
