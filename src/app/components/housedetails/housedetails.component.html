@@ -1,16 +1,16 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 
 
-<div class="my-4  shadow rounded bg-light">
+<div class="my-4 d-flex shadow rounded bg-light">
   <div class="row align-items-center  py-2">
     <div class="col-5 mx-2 rounded img-carusel-custom ">
-      <div class="d-flex justify-content-between  mt-2 img-carusel-icons">
+      <div class="d-flex align-items-center justify-content-between  mt-2 img-carusel-icons">
         <button class="btn btn-light img-prev" (click)="navigateImages('prev')"><i class="fa fa-angle-left"></i></button>
         <button class="btn btn-light img-next" (click)="navigateImages('next')"><i class="fa fa-angle-right"></i></button>
       </div>
       <img [src]="url+'/img/houses/'+myHouse.images[imgIndex]" style="border: 2px solid rgb(0, 0, 0); opacity: 1; cursor: pointer;" class="img-fluid h-50 w-100 rounded img-animated" (click)="openPopup()">
 
-      <div class="my-2 py-2 shadow bg-light d-flex justify-content-center gap-1 rounded">
+      <div class="my-2 py-2 border border-2 shadow bg-light d-flex justify-content-center gap-1 rounded">
         <div class=" border rounded shadow" style="width: 80px; cursor: pointer;" *ngFor="let img of myHouse.images; let index = index">
           <img [src]="url+'/img/houses/'+img" (click)="getImgIndex(index)"
           [style.transform]="index === imgIndex ? 'scale(1.1)' : 'scale(1)'"

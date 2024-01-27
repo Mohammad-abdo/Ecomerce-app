@@ -37,12 +37,21 @@
 }
 .img-carusel-custom{
   position: relative;
+&:hover {
+  .img-prev,.img-next{
+     color: #000000;
+    background-color: white;
+    border: #ffb300;
+  }
+
+  }
   .img-carusel-icons{
     position: absolute;
     top: 40%;
-    width: 90%;
-    margin-left: 20px;
-
+    left: 0;
+width: 100%;
+padding: 0 9px;
+margin: 0 auto;
 .img-prev,.img-next{
   width: 40px;
   height: 40px;
@@ -50,8 +59,8 @@
   border-radius: 50%;
   color: #ffffff;
   transition: all 0.6s ease-in-out;
-  background-color: transparent;
-  border: 1px solid #ffb300;
+  background-color: #ffffff78;
+  border: 1px solid #0f0a0075;
   font-size: 20px;
   &:hover{
     color: #000000;

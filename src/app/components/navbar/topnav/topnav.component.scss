@@ -1,0 +1,14 @@
+.small_nav{
+  height: 60px;
+
+  .nav_link{
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    transition: all 0.6s ease-in-out;
+    &:hover{
+      color: #ffb300 !important;
+    }
+  }
+}

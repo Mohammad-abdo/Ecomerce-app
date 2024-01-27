@@ -10,8 +10,9 @@ import { CategoreService } from 'src/app/Services/categore.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  isLogin: boolean = false;
+
   categories: category[] = [];
+  isLogin: boolean = false;
 
   constructor(
     private _AuthService: AuthService,
@@ -24,9 +25,6 @@ export class NavbarComponent {
           : (this.isLogin = false);
       },
     });
-  }
-  logOut() {
-    this._AuthService.logOut();
   }
 
   ngOnInit(): void {
