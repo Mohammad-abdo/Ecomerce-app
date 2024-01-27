@@ -19,44 +19,7 @@
 }
 // ======================
 
-.categore{
-overflow-x: hidden;
-outline: none;
-  display: flex;
-  box-sizing: inset 2px 2px 2px #00000077;
-  display: flex;
 
-width: 100%;
-.scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  display: flex;
-  width: 85%;
-  .item{
-
-    flex: 0 0 auto;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-
-    >a{
-    margin: 5px;
-   font-size: 16px;
-   color: #1b1b1acd;
-transition: all 0.6s ease-in-out;
-   padding: 5px 0;
-      box-sizing: inset 2px 2px 2px #00000077;
-      &:hover{
-        color: #ffa12e;
-      }
-    }
-  }
-}
-
-}
 .carousel-container {
   position: relative;
   width: 100%;
@@ -109,39 +72,3 @@ height: 100px;
 }
 
 // ================
-.categories_ul
-{
-  position: relative;
-&:hover .hiden-ul{
-  display: block;
-}
-.hiden-ul{
-  display: none;
-}
-  .ul_category{
-    position: absolute;
-    background-color: #f0f0f0cc;
-    border-radius: 20px;
-    box-shadow: 2px 3px 2px rgb(0 0 0 / 0%);
-    z-index: 1000;
-    width: 600px;
-    top: 40px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-  >div{
-font-size: 18px;
-color: rgb(0, 0, 0);
-font-weight: 400;
-margin: 5px;
-padding: 0 3px;
-border-radius: 10px;
-transition: all 0.6s ease-in-out;
-cursor: pointer;
-&:hover{
-  color: #ffa12e;
-  background-color: #ffffff7e;
-}
-  }
-}}
