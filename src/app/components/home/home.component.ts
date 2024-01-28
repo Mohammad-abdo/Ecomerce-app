@@ -3,6 +3,7 @@ import { GetProductsService } from 'src/app/Services/get-products.service';
 import { House } from './../../Models/house';
 import { environment } from 'src/environments/environment';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import * as ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-home',
@@ -38,6 +39,8 @@ constructor(private _GetProductsService:GetProductsService){
 }
 
 ngOnInit():void{
+
+
   this.isLoder= true;
 setTimeout(()=>{
   this._GetProductsService.getAllProducts().subscribe({
@@ -52,6 +55,14 @@ setTimeout(()=>{
     }
   })
 },2000)
+
+ScrollReveal().reveal('.your-element-class', {
+  delay: 200,
+  distance: '20px',
+  origin: 'left',
+  easing: 'ease-in-out',
+  // Add more configuration options as needed
+});
 }
 getStars(rate: any): any[] {
   // Assuming rate is a number between 1 and 5

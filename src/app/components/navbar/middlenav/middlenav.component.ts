@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { AuthService } from 'src/app/Services/auth.service';
+import * as ScrollReveal from 'scrollreveal';
+
 
 @Component({
   selector: 'app-middlenav',
@@ -20,5 +22,13 @@ isLogin: boolean = false;
 logOut() {
   this._AuthService.logOut();
 }
-
+OnInit():void{
+  ScrollReveal().reveal('.logo', {
+    delay: 200,
+    distance: '20px',
+    origin: 'left',
+    easing: 'ease-in-out',
+    // Add more configuration options as needed
+  });
+}
 }
