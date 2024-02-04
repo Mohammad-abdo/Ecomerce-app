@@ -15,7 +15,7 @@ export class GetProductsService {
 
   getAllProducts(): Observable<House[]> {
     return this._HttpClient
-      .get<House[]>(`${environment.BaseApiURL}/houses`)
+      .get<House[]>(`${environment.BaseApiURL}/houses?limit=20`)
       .pipe(map((res: any) => res.data.houses));
   }
   getProduct(id: string): Observable<House> {

@@ -1,0 +1,198 @@
+.spe-card {
+  margin: 20px;
+  width: 350px;
+  height: 310px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.7s ease;
+
+  .img-box {
+    border-radius: 12px;
+    height: 85%;
+    transition: all 0.7s ease-in-out;
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      transition: all 0.7s ease-in-out;
+      border-radius: 6px;
+    }
+  }
+  .card-house-info{
+    height: 15%;
+    >div{
+      height: 100%;
+      margin: 0 10px;
+      .filter-price{
+        font-size: 16px;
+        color: #3b3b3b;
+        font-weight: 700;
+        font-family: 'Droid Arabic Kufi',sans-serif;
+      }
+      .title-fade, .filter-price {
+        font-size: 16px;
+        color: #3b3b3b;
+        font-weight: 700;
+        font-family: 'Droid Arabic Kufi',sans-serif;
+
+    }
+    }
+  }
+  // hover overlay
+  .card-info-buttons {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease;
+    border-radius: 12px;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(9, 9, 9, 0.438);
+    .search-plus {
+      color: rgba(226, 226, 226, 0.611);
+      transition: all 0.6s ease;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover{
+        color: white;
+  transform: scale(1.1);
+
+      }
+    }
+
+  }
+}
+.spe-card:hover .card-info-buttons {
+  transition: all 0.5s ease;
+  display: block;
+}
+.spe-card:hover .card-house-info {
+  transition: all 0.5s ease;
+  display: none;
+}
+.spe-card:hover .img-box {
+  transition: all 0.5s ease;
+  height: 100% !important;
+  img {
+
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.936);
+  display: none;
+  overflow-y: none;
+  z-index: 99999;
+
+  .overlay-container {
+    width: 100% !important;
+    position: relative;
+    height: 99vh !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+.overlay-footer{
+  height: 60px;
+  width: 39%;
+  display: flex;
+
+  align-items: center;
+  align-content: flex-end;
+  flex-direction: row;
+}
+    .border_top{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 9%;
+      border-top: 2px solid #ffffff77;
+      img{
+        height: 50px;
+        width: 60px;
+        border-radius: 5px;
+      }
+    }
+    .clear {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      cursor: pointer;
+      i {
+        font-size: 25px;
+        color: white;
+        transition: all 0.5s ease;
+        font-weight: 400;
+        border-radius: 50%;
+        &:hover {
+          color: rgb(185, 185, 185);
+          background-color: rgba(44, 44, 44, 0.437);
+          border: 1px solid #fff;
+        }
+      }
+    }
+    img {
+      width: 87%;
+      border: 1px solid #ffffff29;
+      margin: 20px auto;
+      height: 84%;
+
+    }
+    .overlay-info-button{
+      margin: 0;
+      width: 85%;
+      height: 60px;
+      >button {
+
+        margin: 0 10px;
+
+      }
+    }
+  }
+}
+.body-no-scroll {
+  overflow: hidden;
+  position: fixed;
+}
+button {
+  width: 140px;
+  color: white;
+  margin: 5px;
+  border-radius: 8px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+.cart-button {
+  transition: all 0.5s ease;
+
+  background-color: #e74952;
+  border: none;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #e74952;
+    color: white;
+  }
+}
+.more-button {
+  transition: all 0.9s ease-in-out;
+
+  background-color: transparent;
+  border: 1px solid #ffffff88;
+  color: #ffffff88;
+  &:hover {
+    background-color: #664bf2;
+    border: none;
+  }
+}

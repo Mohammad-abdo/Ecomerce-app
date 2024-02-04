@@ -1,0 +1,97 @@
+<!--  Create Special Card for landing page  -->
+
+<div class="spe-card rounded">
+  <div class="img-box rounded">
+    <img
+    [src]=" url + '/img/houses/'+image"
+      class="card-full-img rounded"
+      alt=" {{title}}"
+    />
+  </div>
+  <div class="card-house-info">
+    <div
+      class="d-flex align-items-center justify-content-between   border-top "
+    >
+      <!-- price -->
+      <span class="filter-price" > {{ price | currency : "USD" }}</span>
+      <!-- house name and category icon -->
+      <div class="">
+        <span class="fs-6 title-fade d-inline-block font-bold mx-2">
+          {{title |slice:0:12}}
+        </span>
+        <img
+          src="https://store.dimofinf.net/styles/store/img/class_c.svg"
+          alt=""
+          class="rounded"
+          style="height: 35px; width: 50px;"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- when hover is appear  -->
+  <div class="card-info-buttons">
+    <div class="show-card-img">
+      <!-- icon (+) -->
+    </div>
+    <div class="d-flex align-items-center justify-content-center flex-column">
+      <!-- category icon  -->
+      <!-- your.component.html -->
+      <div class="d-flex w-100 flex-start my-3">
+        <div
+          class="fas fa-search-plus m-2 search-plus"
+          (click)="openPopup()"
+        ></div>
+      </div>
+      <div class="my-2">
+        <img
+          src="https://store.dimofinf.net/styles/store/img/class_c.svg"
+          alt=""
+        />
+      </div>
+      <!-- Add To Cart -->
+      <button class="cart-button">أضف للعربة</button>
+
+      <!-- More info  -->
+      <button class="more-button">المزيد</button>
+    </div>
+  </div>
+</div>
+<div
+  class="overlay"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayStyle }"
+>
+  <div class="overlay-container">
+    <span class="clear" (click)="closePopup()">
+      <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+    <img
+    [src]=" url + '/img/houses/'+image"
+      class="card-full-img"
+      alt=" {{title}}"
+    />
+    <div class="border_top d-flex align-items-center">
+      <div class="mx-auto overlay-info-button d-flex">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <div class="d-flex">
+            <button class="cart-button">أضف للعربة</button>
+
+            <!-- More info  -->
+            <button class="more-button">المزيد</button>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="text-white font-bold mx-2"> {{title }} </span>
+            <img
+              src="https://store.dimofinf.net/styles/store/img/class_c.svg"
+              alt=""
+              class=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

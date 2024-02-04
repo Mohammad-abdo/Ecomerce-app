@@ -1,5 +1,8 @@
 
 <app-min-slider></app-min-slider>
+<div class="text-center my-3">
+  <span class="border-bottom border-3 border-dark w-25 d-block fs-3">All Houses</span>
+</div>
 
 <div class=" my-5">
  <div *ngIf="isLoder" class="my-5 d-flex align-items-center justify-content-center">
@@ -8,9 +11,10 @@
   <i *ngIf="isLoder" class="fas  fa-spinner fa-spin-pulse my-5 fs-5 text-danger  center loder_icon" ></i>
  </div>
 <div class="container">
-  <div class="row  mx-auto">
-    <div *ngFor="let item of Houses" class="col-12  col-md-4 col-xl-3 product rounded house-card ">
-      <div class="my-2  rounded " >
+  <div class="row   mx-auto">
+    <div *ngFor="let item of Houses" class="col-12 col-md-4 col-xl-3  product rounded house-card ">
+      <app-main-card [name]="item.name" [address]="item.address " [price]="item.price" [rate]="item.rate" [images]="item.images"></app-main-card>
+      <!-- <div class="my-2  rounded " >
       <div class="w-100">
         <owl-carousel-o [options]="customOptions">
 
@@ -48,7 +52,7 @@
   <span class="cart-icon text-center w-100 "><i class="fa-solid fa-cart-shopping"></i></span>
 
   <span class="heart-icon w-100 text-center"><i class="fa-regular fa-heart"></i></span>
-</div>
+</div> -->
     </div>
   </div>
 </div>

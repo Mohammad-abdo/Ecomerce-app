@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./houses.component.scss']
 })
 export class HousesComponent {
+  constructor(){}
 
 }

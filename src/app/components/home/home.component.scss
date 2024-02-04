@@ -28,7 +28,7 @@ img{
 // }
 // }
 .house-card{
-  scale:  .5; opacity: 0;
+  scale:  .8; opacity: 0.5;
   transition: all .9s ease-in-out;
 animation: fade-in linear forwards;
 animation-timeline: view(500px 100px);

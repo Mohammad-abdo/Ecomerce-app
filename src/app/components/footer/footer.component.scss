@@ -1,0 +1,174 @@
+footer {
+  font-family: "Droid Arabic Kufi", sans-serif !important;
+  background-color: #f8f9fa;
+}
+.top-sec {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #949393;
+  .footer-icon-top-sec {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(244, 213, 155);
+    color: slateblue;
+    display: flex;
+    align-items: center;
+    transition: all 0.7s ease-in;
+    justify-content: center;
+    box-shadow: inset 2px 3px 2px #252525a9, 2px 3px 3px #4b4040a9;
+    i {
+      font-size: 25px;
+      color: #020202;
+    }
+    span {
+      font-family: "Droid Arabic Kufi", sans-serif !important;
+    }
+    &:hover {
+      background-color: #f4f4f4;
+      transform: scale(1);
+      i {
+        color: rgb(255, 162, 0);
+      }
+    }
+  }
+  .right .footer-top-input {
+    border-radius: 12px;
+    .top-input,
+    .top-button {
+      border-radius: 6px;
+      border: none;
+      margin: 0 5px;
+    }
+
+    .top-button {
+      padding: 5px 10px;
+      transition: all 0.6s ease-in;
+      background-color: #e74952;
+      color: rgb(255, 255, 255);
+      box-shadow:inset 2px 2px 3px #0000003c;
+
+      font-weight: bold;
+      &:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        // border: 1px solid #545454;
+      }
+    }
+    .top-input {
+      padding: 5px 10px;
+      width: 250px;
+    }
+  }
+  .left,
+  .middle {
+    border-left: 2px solid #8e8c8c;
+  }
+}
+
+.footer__ul {
+  display: flex;
+  align-items: center;
+  h3 {
+    direction: rtl;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #ff8808;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .border__left {
+    border-right: 1px solid #ee9c03;
+    direction: rtl;
+    .footer__li {
+      font-size: 13px;
+      font-family: "Droid Arabic Kufi", sans-serif !important;
+      a {
+        text-decoration: none;
+        color: #5d5d5d;
+        &:hover {
+          color: #ff8400;
+        }
+      }
+    }
+  }
+}
+.social__media__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  box-shadow: inset 2px 2px 2px #c9c8c8;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #2b2b2b;
+  transition: all 0.6s ease-in;
+  i {
+    font-size: 25px;
+  }
+  &:hover {
+    transform: scale(1);
+    color: #080808;
+    box-shadow: inset 2px 2px 2px #1d1d1d;
+    //  border: 2px dotted #ffffff;
+  }
+}
+.facebook {
+  color: #003b8d;
+}
+.twitter {
+  color: #007393;
+}
+.youtube {
+  color: #860303;
+}
+.instagram {
+  color: #ab3a54;
+}
+.linkedin {
+  color: #003064;
+}
+
+.watsap__icon {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  bottom: 10px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  transition: all 0.5s ease-in;
+  a {
+    i {
+      font-size: 22px;
+      color: #029d0f;
+    }
+  }
+  &:hover {
+    transform: scale(1.1);
+    color: #3ae348;
+    background: #ffffff;
+    box-shadow: 2px 2px 3px #000000;
+    &::before {
+      content: "WhatsApp";
+
+      position: absolute;
+      top: -10px;
+      width: 70px;
+      right: 30px;
+      font-size: 10px;
+      padding: 0 5px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+      color: #000000;
+      background-color: #f2f2f2;
+      border-radius: 15px;
+      box-shadow: 2px 2px 3px #000000;
+    }
+  }
+}

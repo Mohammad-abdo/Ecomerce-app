@@ -2,18 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+/* styles.scss */
+@import '~@mdi/font/css/materialdesignicons.min.css';
 
 :root
 {
     --main-color:#000000;
     --light-color:#f0f3f2;
     --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
-    --font-family:'Encode Sans Expanded', sans-serif;
+    --font-family:'Droid Arabic Kufi',serif;
+    --font-family2: 'Archivo Narrow';
     --rating-color:#ffc908;
     --transiton-all:all 0.6s ease-in-out;
 }
 body{
-  font-family: var(--font-family) !important;
+  // font-family: var(--font-family) !important;
+  font-family: 'Droid Arabic Kufi',serif;
+
 }
 
 img{
@@ -39,11 +44,15 @@ li{
 }
 .product
 {
-  box-shadow: var(--shadow);
+  // box-shadow: var(--shadow);
   transition: var(--transiton-all);
   margin: 5px 0;
-  border:  1px var(--main-color);
   position: relative;
+  height: 440px;
+  padding: 10px;
+  &:hover{
+    box-shadow: var(--shadow);
+  }
   .wish_market{
     position: absolute;
   transition: var(--transiton-all);
@@ -100,6 +109,8 @@ align-items: center;
 {
   transition: transform 1s , opacity 1s;
   transform: translateY(100%);
+  position: absolute;
+  bottom: 10px;
   opacity: 0;
   font-weight: bold;
   box-shadow: inset 1px 2px 3px #1415157b;
@@ -151,19 +162,21 @@ border: 1px solid #0000005e;
   font-size: 20px;
   /* margin: 5px; */
   padding: 4px 7px;
-  background: transparent;
+  background: transparent !important;
   display: inline-block;
   cursor: pointer;
   border-radius: 50% !important;
   border: 1px solid #fff;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.6s ease;
   &:hover{
-    background-color: #ffe895;
-    color: #000000;
+    background-color: #141414;
+    color: #ffffff;
   }
 }
+
+

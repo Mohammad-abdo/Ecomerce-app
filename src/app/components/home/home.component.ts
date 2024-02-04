@@ -11,6 +11,7 @@ import * as ScrollReveal from 'scrollreveal';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  url=environment.BaseApiURL
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -27,10 +28,13 @@ export class HomeComponent implements OnInit {
     nav: true,
     navText: ['<button class="owl-prev"><i class="fa fa-angle-left"></i> </button>', '<button class="owl-next"> <i class="fa fa-angle-right"></i></button>']
   };
+  getStars(rate: any): any[] {
+    // Assuming rate is a number between 1 and 5
+    return Array.from({ length: rate }, (_, index) => index + 1);
+  }
 
 
   Houses:House[]=[]
-  url=environment.BaseApiURL
   isLoder: boolean = false;
 
 constructor(private _GetProductsService:GetProductsService){
@@ -64,8 +68,5 @@ ScrollReveal().reveal('.your-element-class', {
   // Add more configuration options as needed
 });
 }
-getStars(rate: any): any[] {
-  // Assuming rate is a number between 1 and 5
-  return Array.from({ length: rate }, (_, index) => index + 1);
-}
+
 }

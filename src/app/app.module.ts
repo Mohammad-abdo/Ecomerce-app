@@ -25,7 +25,11 @@ import { MinSliderComponent } from './components/home/min-slider/min-slider.comp
 import { HousectegoryComponent } from './components/housectegory/housectegory.component';
 
 import { TopnavComponent } from './components/navbar/topnav/topnav.component';
-import { MiddlenavComponent } from './components/navbar/middlenav/middlenav.component'
+import { MiddlenavComponent } from './components/navbar/middlenav/middlenav.component';
+import { CardsStylesComponent } from './components/cards-styles/cards-styles.component';
+import { LandingPageCardComponent } from './components/cards-styles/landing-page-card/landing-page-card.component';
+import { MainCardComponent } from './components/cards-styles/main-card/main-card.component';
+import { CategoryDetailsComponent } from './components/housectegory/category-details/category-details.component'
 
 
 @NgModule({
@@ -49,6 +53,10 @@ import { MiddlenavComponent } from './components/navbar/middlenav/middlenav.comp
     HousectegoryComponent,
     TopnavComponent,
     MiddlenavComponent,
+    CardsStylesComponent,
+    LandingPageCardComponent,
+    MainCardComponent,
+    CategoryDetailsComponent,
   ],
   imports: [
     BrowserModule,
