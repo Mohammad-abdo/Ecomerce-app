@@ -1,51 +1,77 @@
-<div class=" my-5 container">
-  <div *ngIf="isLoder" class="my-5 d-flex align-items-center justify-content-center">
+<div class="bg-gray bs-gray-300 mt-5 py-5">
+  <div class=" container">
+    <div *ngIf="isLoder" class="my-5 d-flex align-items-center justify-content-center">
 
 
-   <i *ngIf="isLoder" class="fas  fa-spinner fa-spin-pulse my-5 fs-5 text-danger  center loder_icon" ></i>
-  </div>
+     <i *ngIf="isLoder" class="fas  fa-spinner fa-spin-pulse my-5 fs-5 text-danger  center loder_icon" ></i>
+    </div>
 
- <div class="container shadow">
-  <div class="my-2">
-    <div class="d-flex align-items-center justify-content-between py-3">
+   <div class="container ">
+    <div class="my-2">
+      <div class="d-flex align-items-center justify-content-between py-3">
 
-      <select id="filter-cont" >
-        <option value="date" data-sort="asc">التاريخ</option>
-        <option value="comments" data-sort="asc">الأكثر تفاعلًا</option>
-        <option value="views" data-sort="asc">الأكثر مشاهدةً</option>
-        <option value="greet" data-sort="asc">الأكثر إهداءً</option>
-        <option value="priceint" data-sort="desc">السعر - من الأكثر إلي الأقل</option>
-        <option value="priceint" data-sort="asc">السعر - من الأقل إلي الأكثر</option>
-        </select>
+        <select id="filter-cont" >
+          <option value="date" data-sort="asc">التاريخ</option>
+          <option value="comments" data-sort="asc">الأكثر تفاعلًا</option>
+          <option value="views" data-sort="asc">الأكثر مشاهدةً</option>
+          <option value="greet" data-sort="asc">الأكثر إهداءً</option>
+          <option value="priceint" data-sort="desc">السعر - من الأكثر إلي الأقل</option>
+          <option value="priceint" data-sort="asc">السعر - من الأقل إلي الأكثر</option>
+          </select>
 
-      <div class="cats-cont">
-        <button class="filter-button ">الشقق</button>
-        <button class="filter-button ">الفيلات</button>
-        <button class="filter-button ">الشاليهات</button>
-        <button class="filter-button active">الكل</button>
+        <div class="cats-cont">
+          <button class="filter-button ">الشقق</button>
+          <button class="filter-button ">الفيلات</button>
+          <button class="filter-button ">الشاليهات</button>
+          <button class="filter-button active">الكل</button>
+
+        </div>
+
+
 
       </div>
-
-
-
     </div>
-  </div>
-   <div class="row  mx-auto">
-     <div *ngFor="let item of Houses" class="col-12  col-md-6 col-xl-4   ">
-      <app-landing-page-card [title]="item.name" [price]="item.price" [image]="item.images[0]"  ></app-landing-page-card>
+     <div class="row  mx-auto">
+       <div *ngFor="let item of Houses" class="col-12  col-md-6 col-xl-4   ">
+        <app-landing-page-card [title]="item.name" [price]="item.price" [image]="item.images[0]" [_id]="item._id" ></app-landing-page-card>
+       </div>
      </div>
+
+<div class="my-2 d-flex align-items-center justify-content-center">
+  <button class="border shadow rounded-2 bg-danger text-white  px-2  py-1 my-2 fs-6" style="width: 120px; "> More <i class="fa-solid fa-arrow-right"></i> </button>
+
+</div>
+
    </div>
 
+   </div>
+</div>
+<div class="bg-dark">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-center flex-column">
+      <h2>
+        Free add-ons for your site
+      </h2>
+      <p>Demofinf5 program provides many plugins and modules that help you design a website professionally</p>
+      <div class="my-2">
+        <div class="row  mx-auto">
+          <div *ngFor="let item of Houses" class="col-12  col-md-6 col-xl-4   ">
+           <app-landing-page-card [title]="item.name" [price]="item.price" [image]="item.images[0]" [_id]="item._id" ></app-landing-page-card>
+          </div>
+        </div>
+      </div>
+
+<div class="my-2 d-flex align-items-center justify-content-center">
+  <button class="border shadow rounded-2 bg-danger text-white  px-2  py-1 my-2 fs-6" style="width: 120px; ">  More <i class="fa-solid fa-arrow-right"></i> </button>
+
+</div>
+    </div>
+  </div>
+</div>
 
 
- </div>
-
- </div>
-
-
-
- <div class=" py-1 " style="background-color: #b9b8b8; "  >
-  <div class="container  justify-content-center my-5 ">
+ <div class=" py-1 bg-sec" style="background-color: #b9b8b8;"  >
+  <div class="container  justify-content-center my-3" style="z-index: 999;">
     <div class="row  align-items-center justify-content-between ">
       <div class="col-4 col-md-6 col-xl-6 col-lg-6  ">
          <div class=" d-flex align-items-center justify-content-center">
@@ -59,6 +85,62 @@
              It provides many features that make it the best without any competition.</p>
              <button class="border shadow rounded-2 bg-danger text-white  px-2  py-1 my-2 fs-6" style="width: 120px; "> Reserv Now <i class="fa-solid fa-arrow-left"></i> </button>
 
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <div class="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 col-md-4 col-12">
+        <div class="card border-none shadow">
+          <div class="card-body  d-flex align-items-center justify-content-center flex-column">
+              <img src="../../../assets/1.png" alt="" class="my-2">
+              <h5 class="my-2">Do you need help ?</h5>
+              <div class=" " >
+                <p>   There is your technical support 24/7 throughout the</p>
+                <p> day, with the best technical support team </p>
+                <p>in the Arab world</p>
+
+
+
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4 col-12">
+        <div class="card border-none shadow">
+          <div class="card-body  d-flex align-items-center justify-content-center flex-column">
+              <img src="../../../assets/2.png" alt="" class="my-2">
+              <h5 class="my-2">  Program explanations</h5>
+              <div class="  ">
+              <p>  There are clear and simple pictorial and written explanations</p>
+
+                <p>     of the program. </p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+
+      <div class="col-xl-4 col-md-4 col-12">
+        <div class="card border-none shadow">
+          <div class="card-body  d-flex align-items-center justify-content-center flex-column">
+              <img src="../../../assets/3.png" alt="" class="my-2">
+              <h5 class="my-2"> Your website in 3 steps</h5>
+              <div class="  " >
+<p>This is one of the best features of the program,</p>
+<p> which is to create a website in 3 steps</p>
+
+              </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

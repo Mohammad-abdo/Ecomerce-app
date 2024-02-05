@@ -11,10 +11,20 @@
   <i *ngIf="isLoder" class="fas  fa-spinner fa-spin-pulse my-5 fs-5 text-danger  center loder_icon" ></i>
  </div>
 <div class="container">
-  <div class="row   mx-auto">
+  <div class="row  mx-auto">
+    <div *ngFor="let item of Houses" class="col-12  col-md-6 col-xl-4   house-card ">
+     <app-landing-page-card [title]="item.name" [price]="item.price" [image]="item.images[0]" [_id]="item._id" ></app-landing-page-card>
+    </div>
+  <!-- <div class="row   mx-auto">
     <div *ngFor="let item of Houses" class="col-12 col-md-4 col-xl-3  product rounded house-card ">
       <app-main-card [name]="item.name" [address]="item.address " [price]="item.price" [rate]="item.rate" [images]="item.images"></app-main-card>
-      <!-- <div class="my-2  rounded " >
+
+    </div>
+  </div> -->
+</div>
+</div>
+
+    <!-- <div class="my-2  rounded " >
       <div class="w-100">
         <owl-carousel-o [options]="customOptions">
 
@@ -53,8 +63,3 @@
 
   <span class="heart-icon w-100 text-center"><i class="fa-regular fa-heart"></i></span>
 </div> -->
-    </div>
-  </div>
-</div>
-</div>
-

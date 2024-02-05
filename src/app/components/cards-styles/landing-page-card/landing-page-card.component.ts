@@ -12,6 +12,7 @@ export class LandingPageCardComponent {
   @Input() title:string=''
   @Input() image:string=''
   @Input() price:number=0
+  @Input() _id?:string=''
 
   url=environment.BaseApiURL
   displayStyle :string= 'none';
